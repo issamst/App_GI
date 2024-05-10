@@ -1,0 +1,725 @@
+<p>users works!</p>
+
+<div class="card">
+  
+    <div class="row" style="    margin-bottom: 1em;margin-left: 20em;">
+      <div class="col-xl-3 col-lg-auto">
+        <div class="card card-stats mb-0 mb-xl-0">
+          <div class="card-body">
+            <div class="row">
+              <div class="col" style="font-size: 30px;">
+                <h5 class="card-title text-uppercase text-muted">Users </h5>
+                <span class="h2 font-weight-bold mb-0">{{ totalUses }}</span>
+              </div>
+              <div class="col-auto">
+                <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <div style="font-size: 20px;">
+                <span class="text-warning">
+                  <i class="{{ getArrowIcon(getPercentageChangeToday()) }}"></i>
+                  <span class="{{ getPercentageChangeToday() > 0 ? 'text-success' : '' }}">
+                    {{ getPercentageChangeToday() }}
+                  </span>
+                </span>
+                <span class="text-nowrap">Register Today</span>
+              </div>
+              <div style="font-size: 20px;">
+                <span class="text-warning">
+                  <i class="{{ getArrowIcon(getPercentageChangeYesterday()) }}"></i>
+                  <span class="{{ getPercentageChangeYesterday() > 0 ? 'text-success' : '' }}">
+                    {{ getPercentageChangeYesterday() }}
+                  </span>
+                </span>
+                <span class="text-nowrap">Register Yesterday</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-xl-3 col-lg-6">
+        <div class="card card-stats mb-0 mb-xl-0">
+          <div class="card-body">
+            <div class="row">
+              <div class="col" style="font-size: 30px;">
+                <h5 class="card-title text-uppercase text-muted">Status </h5>
+                <span class="h2 font-weight-bold mb-0">{{ TotalStatus() }}</span>
+              </div>
+              <div class="col-auto">
+                <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                  <i class="fa fa-list-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <div style="font-size: 20px;">
+                <span class="text-warning">
+                  <i class="{{ getArrowIcon(getStatusPending()) }}"></i>
+                  <span class="{{ getStatusPending() > 0 ? 'text-success' : '' }}">
+                    {{ getStatusPending() }}
+                  </span>
+                </span>
+                <span class="text-nowrap">Pending</span>
+              </div>
+              <div style="font-size: 20px;">
+                <span class="text-warning">
+                  <i class="{{ getArrowIcon(getStatusDone()) }}"></i>
+                  <span class="{{ getStatusDone() > 0 ? 'text-success' : '' }}">
+                    {{ getStatusDone() }}
+                  </span>
+                </span>
+                <span class="text-nowrap">Done</span>
+              </div>
+              <div style="font-size: 20px;">
+                <span class="text-warning">
+                  <i class="{{ getArrowIcon(getStatusDone()) }}"></i>
+                  <span class="{{ getStatusDone() > 0 ? 'text-success' : '' }}">
+                    {{ getStatusDone() }}
+                  </span>
+                </span>
+                <span class="text-nowrap">Done</span>
+              </div>
+              <div style="font-size: 20px;">
+                <span class="text-warning">
+                  <i class="{{ getArrowIcon(getStatusDone()) }}"></i>
+                  <span class="{{ getStatusDone() > 0 ? 'text-success' : '' }}">
+                    {{ getStatusDone() }}
+                  </span>
+                </span>
+                <span class="text-nowrap">Done</span>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-xl-3 col-lg-6">
+        <div class="card card-stats mb-0 mb-xl-0">
+          <div class="card-body">
+            <div class="row">
+              <div class="col" style="font-size: 30px;">
+                <h5 class="card-title text-uppercase text-muted">Request Password </h5>
+                <span class="h2 font-weight-bold mb-0">{{ totalForgotPassword() }}</span>
+              </div>
+              <div class="col-auto">
+                <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                  <i class="fa fa-unlock-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <div style="font-size: 20px;">
+                <span class="text-warning">
+                  <i class="{{ getArrowIcon(getForgotPasswordone()) }}"></i>
+                  <span class="{{ getForgotPasswordone() > 0 ? 'text-success' : '' }}">
+                    {{ getForgotPasswordone() }}
+                  </span>
+                </span>
+                <span class="text-nowrap">Done</span>
+              </div>
+              <div style="font-size: 20px;">
+                <span class="text-warning">
+                  <i class="{{ getArrowIcon(getForgotPassworPending()) }}"></i>
+                  <span class="{{ getForgotPassworPending() > 0 ? 'text-success' : '' }}">
+                    {{ getForgotPassworPending() }}
+                  </span>
+                </span>
+                <span class="text-nowrap">Pending</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  </div>
+  
+  
+  <div class="card">
+  <div class="card-body">
+      <ul class="nav nav-tabs mb-0" id="ex1" role="tablist">
+          <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="ex1-tab-1" data-bs-toggle="tab" href="#Users" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">Users</a>
+          </li>
+          <li class="nav-item" role="presentation">
+              <a class="nav-link" id="ex1-tab-2" data-bs-toggle="tab" href="#Title" role="tab" aria-controls="ex1-tabs-2" aria-selected="false">Title</a>
+          </li>
+          <li class="nav-item" role="presentation">
+              <a class="nav-link" id="ex1-tab-3" data-bs-toggle="tab" href="#Role" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">Role</a>
+          </li>
+      </ul>
+      <div class="tab-content" id="ex1-content">
+          <div class="tab-pane fade show active" id="Users" role="tabpanel">
+              <div class="table-responsive">
+                <div style="display: flex; justify-content: space-between; align-items: center;margin: 2rem;">
+                  <div class="form-outline" style="flex: 1;">
+                      <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="Search" aria-label="search" style="width: 40%;">
+                  </div>
+                  
+                  <div class="head-user-avatar" [cdkMenuTriggerFor]="userOverlay">
+                      <div class="dropdown-text-end">
+                          <a class="d-block  link-dark text-decoration-none dropdown-link" aria-expanded="false" (click)="toggleDropdown()" >
+                              Choose list columns       
+                              <i *ngIf="!isUserOverlayOpen" class="fa fa-angle-left"></i>
+                              <i *ngIf="isUserOverlayOpen" class="fa fa-angle-down"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <button type="button" class="btn btn-outline-success"  id="forgot"  data-bs-toggle="modal" data-bs-target="#addUserModal">
+                    Add User
+                </button>
+              </div>
+              
+              
+              
+              
+              
+            
+              <table class="table table-striped table-bordered table-sm row-border hover">
+                <thead >
+                  <tr>
+                    <th scope="col" (click)="sortData('teid')" [ngClass]="{'active': sortBy === 'teid'}" *ngIf="showColumns.teid">
+                      TE ID
+                      <span *ngIf="sortBy === 'teid'">
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                      </span>
+                  </th>
+                  
+                  
+                  
+                    <th scope="col" (click)="sortData('fullName')" [ngClass]="{'active': sortBy === 'fullName'}" *ngIf="showColumns.fullName">
+                      fullName
+                      <span *ngIf="sortBy === 'fullName'" >
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                              </th>
+                    <th scope="col" (click)="sortData('phone')" [ngClass]="{'active': sortBy === 'phone'}" *ngIf="showColumns.phone">
+                      phone
+                      <span *ngIf="sortBy === 'phone'">
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                               </th>
+                    <th scope="col" (click)="sortData('name_Role.name_Role')" [ngClass]="{'active': sortBy === 'name_Role.name_Role'}"  *ngIf="showColumns.role">
+                      role
+                      <span *ngIf="sortBy === 'name_Role.name_Role'">
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                      </span>
+                    </th>
+                    <th scope="col" (click)="sortData('name_Title')" [ngClass]="{'active': sortBy === 'name_Title'}" *ngIf="showColumns.job">
+                      Job Title
+                      <span *ngIf="sortBy === 'name_Title'">
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                      </span>
+                    </th>
+                    
+                  
+                    <th scope="col" (click)="sortData('email') "  [ngClass]="{'active': sortBy === 'email'}" *ngIf="showColumns.email">
+                      Email
+                      <span *ngIf="sortBy === 'email'">
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                                </th>
+                    <th scope="col" (click)="sortData('plant')"  [ngClass]="{'active': sortBy === 'plant'}" *ngIf="showColumns.plant">
+                      Plant
+                      <span *ngIf="sortBy === 'plant'">
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                                  </th>
+                    <th scope="col" (click)="sortData('departement')"  [ngClass]="{'active': sortBy === 'departement'}" *ngIf="showColumns.department">
+                      Depaertement
+                      <span *ngIf="sortBy === 'departement'">
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                              </th>
+                    <th scope="col" (click)="sortData('status')"  [ngClass]="{'active': sortBy === 'status'}" *ngIf="showColumns.status">
+                      status
+                      <span *ngIf="sortBy === 'status'">
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                               </th>
+                    <th scope="col" (click)="sortData('refreshTokenExpiryTime')"  [ngClass]="{'active': sortBy === 'refreshTokenExpiryTime'}" *ngIf="showColumns.timeOpen">
+                      Laste Login Date
+                      <span *ngIf="sortBy === 'refreshTokenExpiryTime'">
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                               </th>
+                    <th scope="col" (click)="sortData('registerTime')" [ngClass]="{'active': sortBy === 'registerTime'}"*ngIf="showColumns.registerTime">
+                     Create Date
+                      <span *ngIf="sortBy === 'registerTime'"  >
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                                </th>
+                    <th scope="col" (click)="sortData('resetPasswordExpiryTime')" [ngClass]="{'active': sortBy === 'resetPasswordExpiryTime'}"  *ngIf="showColumns.timeChangePassword">
+                      Password Expires Date
+                      <span *ngIf="sortBy === 'resetPasswordExpiryTime'" >
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                                </th>
+                    <th scope="col" (click)="sortData('request ')" [ngClass]="{'active': sortBy === 'request '}" *ngIf="showColumns.requestPassword">
+                      Request Password
+                      <span *ngIf="sortBy === 'request '" >
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === 1 ? 'black' : '#f1d6d6'}">&#8593;</span>
+                        <span style='font-size:25px;' [ngStyle]="{'color': sortDirection === -1 ? 'black' : '#f1d6d6'}">&#8595;</span>
+                    </span>                               
+                   </th>
+                    <th scope="col" >
+                      Action
+                    </th>
+                  </tr>
+              </thead>
+  
+                <tbody>
+                  <tr *ngFor="let user of getDisplayedUsers() | filter:searchtext; let i = index" [ngClass]="{'row-color-red': user.commenterDelete !== null}">
+                    <td *ngIf="showColumns.teid">{{user.teid}}</td>
+                    <td *ngIf="showColumns.fullName">{{user.fullName}}</td>
+                    <td *ngIf="showColumns.phone">{{user.phone}}</td>
+                    <td *ngIf="showColumns.role">{{user.name_Role.name_Role}}</td>
+                    <td *ngIf="showColumns.job">{{user.name_Title.name_Title}}</td>
+                    <td *ngIf="showColumns.email">{{user.email}}</td>
+                    <td *ngIf="showColumns.plant">{{user.plantID}}</td>
+                    <td *ngIf="showColumns.department">{{user.departementID}}</td>
+                    <td *ngIf="showColumns.status">
+                      <span [ngClass]="{'pending': user.status === 'pending', 'done': user.status === 'done'}">
+                        <i class="dot" [ngClass]="{'orange': user.status === 'pending', 'green': user.status === 'done'}"></i>
+                        <span [ngClass]="{'pending-text': user.status === 'pending', 'done-text': user.status === 'done'}">{{user.status}}</span>
+                      </span>
+                    </td>
+                    <td *ngIf="showColumns.timeOpen">{{user.refreshTokenExpiryTime | date:'dd-MM-yyyy / HH:mm:ss' }}</td>
+                    <td *ngIf="showColumns.registerTime">{{user.registerTime | date:'dd-MM-yyyy / HH:mm:ss' }}</td>
+                    <td *ngIf="showColumns.timeChangePassword">{{user.resetPasswordExpiryTime | date:'dd-MM-yyyy / HH:mm:ss' }}</td>
+                    <td *ngIf="showColumns.requestPassword">
+                      
+                      <button 
+                      (click)="user.request !== null && request(user.id)"
+                      [style.background-color]="user.request === 'pending' ? '#747678' : (user.request === 'done' ? 'green' : 'grey')"
+                      [disabled]="user.request === null || user.commenterDelete !== null"
+                      style="border-radius: 2rem; width: 130px; height: 30px; font-size: 18px;color: white;"
+                    >
+                      <span [style.font-weight]="user.request === 'pending' ? 'bold' : 'bold'">
+                        {{ user.request === 'pending' ? 'Pending' : (user.request === 'done' ? 'Done' : 'pending') }}
+                      </span>
+                    </button>
+                    </td>
+                    <td>
+                      <div class="center-icons wrapper"> <!-- Wrap icons in a div with text-align: center -->
+                        <a class="icone view" data-toggle="modal" data-target="#viewModal{{i}}">
+                          <div class="tooltip">View</div>
+                          <span><i class="fa fa-fw fa-eye"></i></span>
+                        </a>
+                        <a class="icone edite"  [style.pointer-events]="user.commenterDelete ? 'none' : 'auto'" [style.opacity]="user.commenterDelete ? '0.5' : '1'">
+                          <div class="tooltip">Edit</div>
+                          <span><i class="fa fa-fw fa-edit"></i></span>
+                        </a>
+                        <a class="icone delete" data-toggle="modal" data-target="#deleteModal{{i}}" [style.pointer-events]="user.commenterDelete ? 'none' : 'auto'" [style.opacity]="user.commenterDelete ? '0.5' : '1'">
+                          <div class="tooltip">Delete</div>
+                          <span><i class="fa fa-fw fa-trash"></i></span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+                  
+                  
+  
+                  <div class="card-footer py-2">
+                    <div class="hint-text">Showing <b>{{ getDisplayedUsers().length }}</b> out of <b>{{ totalUses }}</b> entries</div>
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-end mb-0">
+                          <li class="page-item" [ngClass]="{ 'disabled': currentPageUser === 1 }">
+                                <a class="page-link" (click)="prevPageUser()" tabindex="-1">
+                                    <i class="fas fa-angle-left"></i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            
+                            <li class="page-item" *ngFor="let page of pagesUser" [ngClass]="{ 'active': currentPageUser === page }">
+                              <a class="page-link" (click)="changePageUser(page)">{{ page }}</a>
+                            </li>
+  
+                            <li class="page-item" [ngClass]="{ 'disabled': currentPageUser === totalPagesUser }">
+                                <a class="page-link" (click)="nextPageUser()">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+                  
+              </div>
+              
+          </div>
+          
+          <div class="tab-pane fade" id="Title" role="tabpanel">
+            <div class="container">
+              <form [formGroup]="titleForm">
+                  <div class="form-group">
+                      <label for="">New Name Title:</label>
+                      <input formControlName="Name_Title" type="text" placeholder="Name Title">
+                  </div>
+                  <div class="form-group">
+                      <div class="row">
+                          <!-- Only show the Save button -->
+                          <div class="col">
+                              <button *ngIf="selectedTitleId === null" (click)="onSaveTitle()" class="btn btn-primary">Save</button>
+                          </div>
+                      </div>
+                      <div class="form-outline mt-3">
+                          <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="Search" aria-label="search" style="margin-bottom: 2em;"> 
+                      </div>
+                      <div class="card-row" *ngFor="let title of getDisplayedTitles() | filter:searchtext; let i = index">
+                        <div class="card-row-details" *ngIf="title.id !== selectedTitleId" (click)="selectTitle(title.id)">
+                          <span *ngIf="!title.isEditing">{{ title.name_Title }}</span>
+                          <input *ngIf="title.isEditing" type="text" [(ngModel)]="title.name_Title" (blur)="onUpdateTitle(title)" (keyup.enter)="onUpdateTitle(title)">
+                      </div>
+                      
+                          <div class="card-row-details" *ngIf="title.id === selectedTitleId">
+                              <input type="text" [(ngModel)]="title.name_Title" (blur)="onUpdateTitle(title.id)" placeholder="Update Title">
+                          </div>
+                          <div class="card-row-action">
+                              <a (click)="selectTitle(title.id)" style="display: block; cursor: pointer; padding: 1em; background-color: #50c5ef; color: white;"><i class="fas fa-edit"></i></a>
+                              <a (click)="deleteTitle(title.id)" style="display: block; cursor: pointer; padding: 1em; background-color: #ef5350; color: white;"><i class="fas fa-trash-alt"></i></a>
+                          </div>
+                      </div>
+                      <!-- Pagination -->
+                      <div class="clearfix">
+                          <div class="hint-text">Showing <b>{{ getDisplayedTitles().length }}</b> out of <b>{{ totalTitles }}</b> entries</div>
+                          <ul class="pagination">
+                              <li class="page-item" [ngClass]="{ 'disabled': currentPage === 1 }">
+                                  <a class="page-link" (click)="prevPage()" tabindex="-1">
+                                      <i class="fas fa-angle-left"></i>
+                                      <span class="sr-only">Previous</span>
+                                  </a>
+                              </li>
+                              <li class="page-item" *ngFor="let page of pages" [ngClass]="{ 'active': currentPage === page }">
+                                  <a class="page-link" (click)="changePage(page)">{{ page }}</a>
+                              </li>
+                              <li class="page-item" [ngClass]="{ 'disabled': currentPage === totalPages }">
+                                  <a class="page-link" (click)="nextPage()">
+                                      <i class="fas fa-angle-right"></i>
+                                      <span class="sr-only">Next</span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          
+              
+          </div>
+          
+          <div class="tab-pane fade" id="Role" role="tabpanel">
+              <div class="container">
+                  <h1><hr></h1>
+                  <div class="cadrs-container">
+                      <div class="cards-form">
+                          <form [formGroup]="RoleForm">
+                              <div class="form-group">
+                                  <label for="">New Name Role:</label>
+                                  <input formControlName="Name_Role" type="text" placeholder="Name Role">
+                              </div>
+                              <div class="form-group">
+                                  <div class="col">
+                                      <button *ngIf="selectedRoleId === null" (click)="onSaveRole()" class="btn btn-primary">Save</button> 
+                                      <button *ngIf="selectedRoleId !== null" (click)="onUpdateRole()" class="btn btn-secondary">Update</button>                                       
+                                    
+                                  </div>
+                              </div>
+                              
+                          </form>
+                      </div>
+                      <div class="cards-grid">
+                          <div class="form-outline mt-3">
+                              <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="Search" aria-label="search" style="margin-bottom: 2em;"> 
+                          </div>
+                          <div *ngIf="roles.length > 0; else noRolesMessage">
+                              <div class="card-row" *ngFor="let role of getDisplayedRoles() | filter:searchtext; let i = index">
+                                  <div class="card-row-details" (click)="selectRole(role.id)">
+                                      <span>{{ role.name_Role }}</span>
+                                  </div>
+                                  <div class="card-row-action">
+                            
+                                      <a (click)="deleteRole(role.id)"><i class="fas fa-trash-alt"></i></a>
+                                  </div>
+                              </div>
+                              
+                            </div>
+                            <ng-template #noRolesMessage>
+                              <div class="text-center">
+                                <p>No roles available</p>
+                              </div>
+                            </ng-template>
+                            
+                            <!-- Pagination -->
+                            <div class="clearfix">
+                              <div class="hint-text">Showing <b>{{ getDisplayedRoles().length }}</b> out of <b>{{ totalRoles }}</b> entries</div>
+                              <ul class="pagination">
+                                <li class="page-item" [ngClass]="{ 'disabled': currentPageRole === 1 }">
+                                  <a class="page-link" (click)="prevPageRole()" tabindex="-1">
+                                    <i class="fas fa-angle-left"></i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                </li>
+                                <li class="page-item" *ngFor="let page of pagesRole" [ngClass]="{ 'active': currentPageRole === page }">
+                                  
+                                  <a class="page-link" (click)="changePageRole(page)">{{ page }}</a>
+                                </li>
+                                <li class="page-item" [ngClass]="{ 'disabled': currentPageRole === totalPagesRole }">
+                                  <a class="page-link" (click)="nextPageRole()">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                  
+                                </li>
+                              </ul>
+                            </div>
+                            
+                          <ng-template #noRolesMessage>
+                              <div class="text-center">
+                                  <p>No roles available</p>
+                              </div>
+                          </ng-template>
+                      </div>
+                      
+  
+                  </div>
+              </div>
+          </div>
+  
+          
+  
+      </div>
+  </div>
+  </div>
+  
+  
+  
+
+  <div class="modal fade"   id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <header class="header">
+            <h1 id="title" class="text-center">Survey Form</h1>
+            <p id="description" class="text-center">
+                Thank you for taking the time to help us improve the platform
+            </p>
+        </header>
+        <div class="form-wrap">	
+            <form id="survey-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label id="name-label" for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label id="email-label" for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label id="number-label" for="number">Age <small>(optional)</small></label>
+                            <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" >
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>current role</label>
+                            <select id="dropdown" name="role" class="form-control" required>
+                                <option disabled selected value>Select</option>
+                                <option value="student">Student</option>
+                                <option value="job">Full Time Job</option>
+                                <option value="learner">Full Time Learner</option>
+                                <option value="preferNo">Prefer not to say</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Would you recommend survey to a friend?</label>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" value="Definitely" name="customRadioInline1" class="custom-control-input" checked="">
+                                <label class="custom-control-label" for="customRadioInline1">Definitely</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" value="Maybe" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline2">Maybe</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline3" value="Not sure" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline3">Not sure</label>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>This survey useful yes or no?</label>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" name="yes" value="yes" id="yes" checked="">
+                                <label class="custom-control-label" for="yes">Yes</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" name="no" value="no" id="no">
+                                <label class="custom-control-label" for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Leave Message</label>
+                            <textarea  id="comments" class="form-control" name="comment" placeholder="Enter your comment here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <button type="submit" id="submit" class="btn btn-primary btn-block">Submit Survey</button>
+                    </div>
+                </div>
+    
+            </form>
+        </div>	
+    </div>
+</div>
+</div>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-"></script>
+  <script src="bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.0.5/js/dataTables.bootstrap5.js"></script>
+  <script > $(document).ready(function() {
+  $('#example').DataTable();
+  });
+  </script>
+  
+  
+  <script >
+  
+  $(document).ready(function() {
+      $('#ingredients').multiselect();
+  });
+  
+  </script>
+  
+  
+  
+  
+  <ng-template #userOverlay>
+  <div class="overlay overlay-user overlay-fall" cdkMenu>
+  <ul>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.teid" disabled>
+        TE ID
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.fullName">
+        Full Name
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.phone">
+        Phone
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.role">
+        Role
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.job">
+        Job
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.email">
+        Email
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.plant">
+        Plant
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.department">
+        Department
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.status">
+        Status
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.timeOpen">
+        Time Open
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.registerTime">
+        Register Time
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.timeChangePassword">
+        Time Change Password
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" [(ngModel)]="showColumns.requestPassword">
+        Request Password
+      </label>
+    </li>
+  </ul>
+  </div>
+  </ng-template>
+  
+  
+  

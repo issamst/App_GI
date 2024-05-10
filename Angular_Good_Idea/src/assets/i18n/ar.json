@@ -1,0 +1,30 @@
+{
+    "Login":"تسجيل الدخول",
+    "Forgot Password ?":"هل نسيت كلمة السر ؟",
+    "Sing Up":"التسجيل",
+    
+    "are you account?":"ليس لديك حساب؟",
+    "First Name":"الاسم الأول",
+    "Last Name":"اسم العائلة",
+    "Title":"عنوان",
+    "Email":"بريد إلكتروني",
+    "Password":"   كلمة المرور ",
+    "Already have account ?":" لديك حساب بالفعل؟",
+    "*TE ID is required":"   *TE ID ",
+    "*Password is required":"مطلوب كلمة المرور *",
+    "*Last Name is required":"مطلوب إسم العائلة *",
+    "*First Name is required":"مطلوب الإسم الأول  *",
+    "*Phone is required":"مطلوب الهاتف *",
+    "*Email is required":"مطلوب البريد الالكتروني *",
+    "Forgot Password":"هل نسيت كلمة السر ",
+    "Full Name":"الاسم الكامل",
+    "Choose your Plant":" Plant اختر خاصتك",
+    "Choose your department":"department اختر خاصتك",
+    "Choose your job":"اختر وظيفتك",
+    "is do not enter email for 'operator'":" لا تدخل البريد الإلكتروني للمشغل",
+    "is the user an Operator?":"هل المستخدم مشغل؟"
+
+
+    
+    
+}

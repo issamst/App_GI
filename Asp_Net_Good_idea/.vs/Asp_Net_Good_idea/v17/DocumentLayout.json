@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\serbo\\Desktop\\Good IDea\\App\\Asp_Net_Good_idea\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC8D0F9-F80F-4B8B-A0BA-CC73C3A1DD3F}|Asp_Net_Good_idea\\Asp_Net_Good_idea.csproj|c:\\users\\serbo\\desktop\\good idea\\app\\asp_net_good_idea\\asp_net_good_idea\\controllers\\usercontrollers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC8D0F9-F80F-4B8B-A0BA-CC73C3A1DD3F}|Asp_Net_Good_idea\\Asp_Net_Good_idea.csproj|solutionrelative:asp_net_good_idea\\controllers\\usercontrollers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\serbo\\Desktop\\Good IDea\\App\\Asp_Net_Good_idea\\Asp_Net_Good_idea\\Controllers\\UserControllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Asp_Net_Good_idea\\Controllers\\UserControllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\serbo\\Desktop\\Good IDea\\App\\Asp_Net_Good_idea\\Asp_Net_Good_idea\\Controllers\\UserControllers\\UserController.cs",
+              "RelativeToolTip": "Asp_Net_Good_idea\\Controllers\\UserControllers\\UserController.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAiwKsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T16:44:42.829Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

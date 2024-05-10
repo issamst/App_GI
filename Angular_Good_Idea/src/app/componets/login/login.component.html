@@ -1,0 +1,134 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3  class=" text-center pt-3 font-weight-bold">{{'Login'|translate}}</h3>
+                        
+                    </div>
+                    <div class="panel-heading form-group p-3">
+                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                
+                                <select class="form-select" (change)="ChangeLang($event)" name="" id="">
+                                    <option [selected]="lang==='en'" value="en">English</option>
+                                    <option [selected]="lang==='fr'" value="fr">French</option>
+                                    <option [selected]="lang==='es'" value="es">Spanish</option>
+                                    <option [selected]="lang==='ar'" value="ar">Arabic</option>
+                                </select>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                   <div class="panel-body p-3">
+                    <form [formGroup]="loginForm">  
+                        <div class="form-group p-3">
+                            <div class="input-field" [class.error]="loginForm.controls['TEID'].dirty && loginForm.hasError('required','TEID')" >
+                                <span class="fa fa-user p-2"></span>
+                                <input formControlName="TEID" type="text" placeholder="TE ID">
+                            </div>
+                        </div>
+
+                        <small *ngIf="loginForm.controls['TEID'].dirty && loginForm.hasError('required','TEID')" class="text-danger"> {{'*TE ID is required'|translate}}</small>
+
+                        <div class="form-group p-3">
+                            <div class="input-field" [class.error]="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')">
+                                <span class="fa fa-lock p-2"></span>
+                                <input  formControlName="Password" [type]="type" placeholder="{{'Password'|translate}}">
+                                <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+                            </div>
+                        </div>
+
+                         <small *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')" class="text-danger">{{'*Password is required'|translate}} </small>
+                  
+
+                         <!-- <div class="text-center mt-4">
+                            <a id="forget" class="font-weight-bold">{{'Forgot Password'|translate}}</a>
+                        </div> -->
+                        
+
+
+                         <div class="d-flex justify-content-end mt-4">
+                            <a id="forgot" data-bs-toggle="modal" data-bs-target="#exampleModal" class="font-weight-bold">{{'Forgot Password'|translate}}</a>
+                        </div>
+                        
+                        
+                        
+
+
+                        
+                        
+                        <button (click)="onLogin()"  type="submit" class="btn btn-primary btn-block mt-4  w-100"> {{'Login'|translate}}</button>
+                        <div class="text-center pt-4 text-muted">
+                           {{'Already have account ?'|translate}}<a id=" forget" routerLink="/signup">{{'Sing Up'|translate}} </a>
+                        </div>
+                    </form>
+                   </div>
+                    <div class="mx-3 my-2 py-2 bordert">
+                    <div class="text-center py-5">
+                        
+                        
+                    </div>
+                   </div> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+
+              <p class="modal-title" id="exampleModalLabel"> <span style="font-size: 25px;font-weight:700">Forget your password?</span><br>
+                  <small>Please provide your E-mail we will send the reset link</small></p>
+
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          </div>
+          <form [formGroup]="ResetPasswordForm">
+            
+            <div class="form-group p-3">
+                {{'is the user an Operator?'|translate}}
+                <label class="toggle" for="myToggle">
+                    <input class="toggle__input" (change)="toggleNotOperator()" type="checkbox" id="myToggle">
+                    <div class="toggle__fill"></div>
+                </label>
+            </div>
+            <div class="modal-body">
+              <div class="form-group pt-0">
+  
+                  <div class="input-field">
+                      <span class="fa fa-user p-2"></span>
+                      <input [(ngModel)]="teID" (ngModelChange)="checkTEValid($event)" formControlName="TEID"  type="text" placeholder="TEID">
+                  </div>
+                  <small *ngIf="!teID" class="text-danger">*TEID is required*</small>
+                  <small *ngIf="!isValidTEID && teID" class="text-danger">*TEID is invalid*</small>
+                
+              </div>
+          
+                <div class="form-group pt-2" *ngIf="!isNotOperatorChecked">
+                    <div class="input-field">
+                        <span class="fa fa-user p-2"></span>
+                        <input [(ngModel)]="resetPasswordEmail" (ngModelChange)="checkValidEmail($event)" formControlName="Email" type="text" placeholder="Email">
+                    </div>
+                    <!-- <small *ngIf="!resetPasswordEmail" class="text-danger">*Email is required*</small> -->
+                    <small *ngIf="!isValidEmail && resetPasswordEmail" class="text-danger">*Email is invalid*</small>
+                </div>
+          </div>
+          
+          <div class="modal-footer">
+                <button id="closeBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" (click)="confirmToSend()" class="btn btn-primary">Send</button>
+          </div>
+      </form>
+
+      </div>
+  </div>
+</div> 

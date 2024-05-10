@@ -1,0 +1,358 @@
+<div class="formAdd" >
+    <form autocomplete="off" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <label for="lName" class="float-left">Title</label>
+            <div class="float-right">
+              <p class="text-danger">Required</p>
+            </div>
+            <input
+              type="text"
+              name="lName"
+              class="form-control"
+              placeholder="Title"
+              required
+            />
+          </div>
+          <div class="col-md-3">
+            <label for="mail" class="float-left">Description</label>
+            <div class="float-right">
+              <p class="text-danger">Required</p>
+            </div>
+            <input
+              type="text"
+              name="mail"
+              class="form-control"
+              placeholder="Description"
+              required
+            />
+          </div>
+          <div class="col-md-3">
+            <label for="age" class="float-left">File_Url</label>
+            <div class="float-right">
+              <p class="text-danger">Required</p>
+            </div>
+            <input
+              type="text"
+              name="age"
+              class="form-control"
+              placeholder="File_Url"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+              <label for="lName" class="float-left">Title</label>
+              <div class="float-right">
+                <p class="text-danger">Required</p>
+              </div>
+              <input
+                type="text"
+                name="lName"
+                class="form-control"
+                placeholder="Title"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <label for="mail" class="float-left">Description</label>
+              <div class="float-right">
+                <p class="text-danger">Required</p>
+              </div>
+              <input
+                type="text"
+                name="mail"
+                class="form-control"
+                placeholder="Description"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <label for="age" class="float-left">File_Url</label>
+              <div class="float-right">
+                <p class="text-danger">Required</p>
+              </div>
+              <input
+                type="text"
+                name="age"
+                class="form-control"
+                placeholder="File_Url"
+                required
+              />
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label for="dob" class="float-left label">Due_Date</label>
+            <div class="float-right">
+              <p class="text-danger">Required</p>
+            </div>
+            <input type="date" class="form-control" name="Due_Date" required />
+          </div>
+          <div class="col-md-3">
+            <label for="dob" class="float-left label">Due_Date</label>
+            <div class="float-right">
+              <p class="text-danger">Required</p>
+            </div>
+            <input type="date" class="form-control" name="Due_Date" required />
+          </div>
+          <div class="col-md-3">
+            <label for="dob" class="float-left label">Due_Date</label>
+            <div class="float-right">
+              <p class="text-danger">Required</p>
+            </div>
+            <input type="date" class="form-control" name="Due_Date" required />
+          </div>
+          <div class="col-md-3">
+            <label for="dob" class="float-left label">Due_Date</label>
+            <div class="float-right">
+              <p class="text-danger">Required</p>
+            </div>
+            <input type="date" class="form-control" name="Due_Date" required />
+          </div>
+        </div>
+  
+        <div class="row" style="margin-top: 15px">
+          <div class="col-md-8"></div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-success btn-block">Save</button>
+          </div>
+          <div class="col-md-2">
+            <button type="reset" class="btn btn-danger btn-block">Clear</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <div class="container">
+    <button type="button" *ngIf="!isFormVisible" class="btn btn-success">
+      Add new
+    </button>
+    <button type="button" *ngIf="isFormVisible" class="btn btn-danger" >
+      Close
+    </button>
+  </div>
+  
+  <table class="table table-black">
+    <thead class="thead-dark">
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>File_Url</th>
+        <th>Status</th>
+        <th>Due_Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td>gergfvrdsfsd</td>
+        <td>csdcsdc</td>
+        <td>csdcsdcsdc</td>
+        <td>svsdvcsdv</td>
+        <td>sdcsdcsdc</td>
+        <td>
+          <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Actions
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Delete</a>
+  
+              <a class="dropdown-item" href="#">Edit</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr >
+        <td>gergfvrdsfsd</td>
+        <td>csdcsdc</td>
+        <td>csdcsdcsdc</td>
+        <td>svsdvcsdv</td>
+        <td>sdcsdcsdc</td>
+        <td>
+          <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Actions
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Delete</a>
+  
+              <a class="dropdown-item" href="#">Edit</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr >
+        <td>gergfvrdsfsd</td>
+        <td>csdcsdc</td>
+        <td>csdcsdcsdc</td>
+        <td>svsdvcsdv</td>
+        <td>sdcsdcsdc</td>
+        <td>
+          <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Actions
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Delete</a>
+  
+              <a class="dropdown-item" href="#">Edit</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr >
+        <td>gergfvrdsfsd</td>
+        <td>csdcsdc</td>
+        <td>csdcsdcsdc</td>
+        <td>svsdvcsdv</td>
+        <td>sdcsdcsdc</td>
+        <td>
+          <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Actions
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Delete</a>
+  
+              <a class="dropdown-item" href="#">Edit</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="containerCard">
+    <div class="card dark" >
+      <img
+        src="https://cdn-icons-png.freepik.com/256/3555/3555878.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div class="text-section">
+          <h5 class="card-title">vfdvdfvdfv</h5>
+          <p class="card-text">sdvsdvsdcdsc</p>
+          <!-- Using Angular pipe to truncate -->
+        </div>
+        <div class="cta-section">
+          <div>Date</div>
+          
+          <button class="btn btn-success"  style="margin: 0 10px;">Add New</button>
+        </div>
+      </div>
+    </div>
+    <div class="card dark" >
+      <img
+        src="https://cdn-icons-png.freepik.com/256/3555/3555878.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div class="text-section">
+          <h5 class="card-title">vfdvdfvdfv</h5>
+          <p class="card-text">sdvsdvsdcdsc</p>
+          <!-- Using Angular pipe to truncate -->
+        </div>
+        <div class="cta-section">
+          <div>Date</div>
+          
+          <button class="btn btn-success" style="margin: 0 10px;">Add New</button>
+        </div>
+      </div>
+    </div>
+    <div class="card dark" >
+      <img
+        src="https://cdn-icons-png.freepik.com/256/3555/3555878.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div class="text-section">
+          <h5 class="card-title">vfdvdfvdfv</h5>
+          <p class="card-text">sdvsdvsdcdsc</p>
+          <!-- Using Angular pipe to truncate -->
+        </div>
+        <div class="cta-section">
+          <div>Date</div>
+          
+          <button class="btn btn-success"  style="margin: 0 10px;">Add New</button>
+        </div>
+      </div>
+    </div>
+    <div class="card dark" >
+      <img
+        src="https://cdn-icons-png.freepik.com/256/3555/3555878.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div class="text-section">
+          <h5 class="card-title">vfdvdfvdfv</h5>
+          <p class="card-text">sdvsdvsdcdsc</p>
+          <!-- Using Angular pipe to truncate -->
+        </div>
+        <div class="cta-section">
+          <div>Date</div>
+          
+          <button class="btn btn-success"  style="margin: 0 10px;">Add New</button>
+        </div>
+      </div>
+    </div>
+    <div class="card dark" >
+      <img
+        src="https://cdn-icons-png.freepik.com/256/3555/3555878.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <div class="text-section">
+          <h5 class="card-title">vfdvdfvdfv</h5>
+          <p class="card-text">sdvsdvsdcdsc</p>
+          <!-- Using Angular pipe to truncate -->
+        </div>
+        <div class="cta-section">
+          <div>Date</div>
+          
+          <button class="btn btn-success"  style="margin: 0 10px;">Add New</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+ 

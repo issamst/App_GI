@@ -1,0 +1,31 @@
+{
+   
+        "Login": "Connexion",
+        "Forgot Password ?": "Mot de passe oublié ?",
+        "Sign Up": "S'inscrire",
+        
+        "Don't have an account?": "Vous n'avez pas de compte ?",
+        "First Name": "Prénom",
+        "Last Name": "Nom de famille",
+        "Title": "Titre",
+        "Email": "Email",
+        "Password": "Mot de passe",
+        "Already have an account?": "Vous avez déjà un compte ?",
+        "*TE ID is required": "* TE ID est requis",
+        "*Password is required": "* Le mot de passe est requis",
+        "*Last Name is required": "* Le nom de famille est requis",
+        "*First Name is required": "* Le prénom est requis",
+        "*Phone is required": "* Le téléphone est requis",
+        "*Email is required": "* L'email est requis",
+        "Forgot Password": "Mot de passe oublié",
+        "Full Name":"Nom complet",
+        "Choose your Plant": "Choisissez votre usine",
+        "Choose your department":"Choisissez votre département", 
+        "Choose your job":"Choisissez votre travail",
+        "is do not enter email for 'operator'":"Ne pas entrer d'email pour 'opérateur' ",
+        "is the user an Operator?":"Est-ce que l'utilisateur est un opérateur ?"
+    
+    
+    
+    
+}
